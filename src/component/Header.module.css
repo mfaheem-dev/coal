@@ -1,0 +1,21 @@
+.header{
+   background-color: #7d8394;               
+  border: none;
+ border-bottom: 1.5px rgb(93, 90, 90) solid;
+}
+
+/* App.css ya Sidebar.module.css */
+.menuIcon{
+  display:none;
+  font-size:3rem;
+  color:white;
+}
+
+/* Mobile */
+@media (max-width:950px){
+
+  .menuIcon{
+    display:block;
+  }
+
+}
