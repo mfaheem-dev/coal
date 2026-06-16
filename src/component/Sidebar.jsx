@@ -2,7 +2,6 @@ import hederlog from "../assets/coal-mining-emblem-2ACCB9N.jpg";
 import Styles from "./Sidebar.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState("Home");
   return (
@@ -11,12 +10,11 @@ const Sidebar = () => {
         className={`d-flex flex-column flex-shrink-0 p-3  ${Styles.sidebarContainer}`}
       >
         <a
-          href="#"
+          href="/"
           className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none"
         >
           <span className={Styles.logo}>
             <img src={hederlog} alt="" />
-            <h3>Coal</h3>
           </span>
         </a>
 
@@ -24,40 +22,64 @@ const Sidebar = () => {
           className={`nav nav-pills flex-column mb-auto ${Styles.sidebarText}`}
         >
           <li className="nav-item">
+            {" "}
             <Link
-              to="/"
+              to="/Home"
               className={`nav-link  text-white ${activeTab === "Home" ? "active" : ""}`}
               onClick={() => setActiveTab("Home")}
             >
+              {" "}
+              <svg className="bi me-2" width="16" height="16">
+                {" "}
+                <use xlinkHref="#Contractor"></use>{" "}
+              </svg>{" "}
               Home
-            </Link>
-          </li>
-          <li className="nav-item">
+            </Link>{" "}
+          </li>{" "}
+          <li>
+            {" "}
             <Link
               to="/Employees"
-              className={`nav-link text-white ${activeTab === "Employees" ? "active" : ""}`}
+              className={`nav-link  text-white ${activeTab === "Employees" ? "active" : ""}`}
               onClick={() => setActiveTab("Employees")}
             >
-              Employees
-            </Link>
-          </li>
-          <li className="nav-item">
+              {" "}
+              <svg className="bi me-2" width="16" height="16">
+                {" "}
+                <use xlinkHref="#grid"></use>{" "}
+              </svg>{" "}
+              Employees{" "}
+            </Link>{" "}
+          </li>{" "}
+          <li>
+            {" "}
             <Link
               to="/Drivers"
-              className={`nav-link text-white ${activeTab === "Drivers" ? "active" : ""}`}
+              className={`nav-link  text-white ${activeTab === "Drivers" ? "active" : ""}`}
               onClick={() => setActiveTab("Drivers")}
             >
-              Drivers
-            </Link>
+              {" "}
+              <svg className="bi me-2" width="16" height="16">
+                {" "}
+                <use xlinkHref="#grid"></use>{" "}
+              </svg>{" "}
+              Drivers{" "}
+            </Link>{" "}
           </li>
-          <li className="nav-item">
+          <li>
+            {" "}
             <Link
               to="/Products"
-              className={`nav-link text-white ${activeTab === "Products" ? "active" : ""}`}
+              className={`nav-link  text-white ${activeTab === "Products" ? "active" : ""}`}
               onClick={() => setActiveTab("Products")}
             >
-              Products
-            </Link>
+              {" "}
+              <svg className="bi me-2" width="16" height="16">
+                {" "}
+                <use xlinkHref="#grid"></use>{" "}
+              </svg>{" "}
+              Products{" "}
+            </Link>{" "}
           </li>
         </ul>
       </div>
@@ -86,40 +108,64 @@ const Sidebar = () => {
             className={`nav nav-pills flex-column mb-auto ${Styles.Uioffcanva}`}
           >
             <li className="nav-item">
+              {" "}
               <Link
-                to="/"
-                className={`nav-link text-white ${activeTab === "Home" ? "active" : ""}`}
+                to="/Home"
+                className={`nav-link  text-white ${activeTab === "Home" ? "active" : ""}`}
                 onClick={() => setActiveTab("Home")}
               >
+                {" "}
+                <svg className="bi me-2" width="16" height="16">
+                  {" "}
+                  <use xlinkHref="#Contractor"></use>{" "}
+                </svg>{" "}
                 Home
-              </Link>
-            </li>
-            <li className="nav-item">
+              </Link>{" "}
+            </li>{" "}
+            <li>
+              {" "}
               <Link
                 to="/Employees"
-                className={`nav-link text-white ${activeTab === "Employees" ? "active" : ""}`}
+                className={`nav-link  text-white ${activeTab === "Employees" ? "active" : ""}`}
                 onClick={() => setActiveTab("Employees")}
               >
-                Employees
-              </Link>
-            </li>
-            <li className="nav-item">
+                {" "}
+                <svg className="bi me-2" width="16" height="16">
+                  {" "}
+                  <use xlinkHref="#grid"></use>{" "}
+                </svg>{" "}
+                Employees{" "}
+              </Link>{" "}
+            </li>{" "}
+            <li>
+              {" "}
               <Link
                 to="/Drivers"
-                className={`nav-link text-white ${activeTab === "Drivers" ? "active" : ""}`}
+                className={`nav-link  text-white ${activeTab === "Drivers" ? "active" : ""}`}
                 onClick={() => setActiveTab("Drivers")}
               >
-                Drivers
-              </Link>
+                {" "}
+                <svg className="bi me-2" width="16" height="16">
+                  {" "}
+                  <use xlinkHref="#grid"></use>{" "}
+                </svg>{" "}
+                Drivers{" "}
+              </Link>{" "}
             </li>
-            <li className="nav-item">
+            <li>
+              {" "}
               <Link
                 to="/Products"
-                className={`nav-link text-white ${activeTab === "Products" ? "active" : ""}`}
+                className={`nav-link  text-white ${activeTab === "Products" ? "active" : ""}`}
                 onClick={() => setActiveTab("Products")}
               >
-                Products
-              </Link>
+                {" "}
+                <svg className="bi me-2" width="16" height="16">
+                  {" "}
+                  <use xlinkHref="#grid"></use>{" "}
+                </svg>{" "}
+                Products{" "}
+              </Link>{" "}
             </li>
           </ul>
         </div>

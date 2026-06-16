@@ -1,21 +1,20 @@
 .header{
-   background-color: #7d8394;               
+   background-color: #1f1851;               
   border: none;
  border-bottom: 1.5px rgb(93, 90, 90) solid;
 }
 
 /* App.css ya Sidebar.module.css */
-.menuIcon{
-  display:none;
-  font-size:3rem;
-  color:white;
+.container{
+  color: white;
+  text-align: center;
+  
+  
+}
+.container h2 {
+  font-weight: 600;
+  font-size: clamp(18px, 5vw, 43px);
+  margin: 0;
 }
 
 /* Mobile */
-@media (max-width:950px){
-
-  .menuIcon{
-    display:block;
-  }
-
-}

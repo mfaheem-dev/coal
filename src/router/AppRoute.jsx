@@ -5,14 +5,19 @@ import Drivers from "../page/monshi/drivers";
 import Home from "../page/monshi/Home";
 import Products from "../page/monshi/Products";
 import MeelEmployees from "../page/monshi/MeelEmployess";
+import LoginPage from "../component/Login";
 import StackEmployees from "../page/monshi/StackEmployess";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <LoginPage />,
+  },
+  {
+    path: "/",
     element: <DashboardLayout role="monshi" />,
     children: [
-      { path: "/", element: <Home /> },
+      { path: "/Home", element: <Home /> },
       {
         path: "/Employees",
         element: <Employees />,
