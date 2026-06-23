@@ -1,0 +1,59 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  /* ✅ BACKGROUND IMAGE HERE */
+  background-image: url("../assets/register.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* optional dark overlay feel */
+  position: relative;
+}
+
+.formBox {
+  width: 420px;
+  background: white;     /* DARK hata diya */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #21165d;
+  text-align: center;
+}
+
+input,
+select {
+  width: 100%;
+  height: 40px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  background: white;
+}
+
+button {
+  margin-top: 10px;
+  float: right;
+  background: #1674d8;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .formBox {
+    width: 95%;
+  }
+}

@@ -1,0 +1,99 @@
+.container {
+  padding: 10px;
+}
+
+/* TOP BAR FIX */
+.topBar {
+  display: flex;
+  justify-content: flex-start;   /* LEFT SIDE */
+  align-items: center;
+
+  height: 45px;
+  padding: 0 10px;
+  gap: 15px;
+}
+
+/* ADD BUTTON SMALL */
+.addBtn {
+  background: #2515ff;
+  color: white;
+  border: none;
+
+  padding: 6px 15px;   /* your desired size */
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+
+  margin-left: auto;   /* 🔥 force right side */
+  width: auto;         /* important */
+  display: inline-block;
+}
+
+/* TABLE SAME BUT CLEAN */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th {
+  background: #21165d;
+  color: white;
+  padding: 12px;
+}
+
+td {
+  padding: 10px;
+  background: #eee;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* DELETE BUTTON */
+.delete {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* EDIT BUTTON */
+.edit {
+  background: green;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* SUBMIT FIX */
+.submit {
+  float: right;
+  margin-top: 10px;
+  background: #21165d;
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .topBar {
+    flex-direction: row;
+    height: auto;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}

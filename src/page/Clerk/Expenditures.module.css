@@ -1,0 +1,167 @@
+.container {
+  padding: 15px;
+  width: 100%;
+}
+
+/* Top Bar */
+.datee {
+  background: #21165d;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Form Section */
+.entrydata {
+  background: #f5f5f5;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.entrydata .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.entrydata input {
+  flex: 1 1 180px;
+  min-width: 180px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.entrydata input:focus {
+  border-color: #21165d;
+}
+
+/* Common Button */
+/* Top Bar */
+.topBar {
+  display: flex;
+  justify-content: flex-start;   /* LEFT SIDE */
+  align-items: center;
+
+  height: 45px;
+  padding: 0 10px;
+  gap: 15px;
+}
+
+/* ADD BUTTON SMALL */
+.addBtn {
+  background: #2515ff;
+  color: white;
+  border: none;
+
+  padding: 6px 15px;   /* your desired size */
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+
+  margin-left: auto;   /* 🔥 force right side */
+  width: auto;         /* important */
+  display: inline-block;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+}
+
+thead th {
+  background: #21165d;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Action Buttons */
+.editbtn {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.editBtn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.btnsubmit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .entrydata .form-row {
+    flex-direction: column;
+  }
+
+  .entrydata input {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  thead th,
+  tbody td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .editbtn {
+    flex-direction: column;
+  }
+
+  .editBtn,
+  .deleteBtn {
+    width: 100%;
+  }
+
+  .datee {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

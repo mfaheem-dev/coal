@@ -1,54 +1,75 @@
-import React from "react";
-import style from "../component/Login.module.css";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import style from "./Login.module.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("http://localhost:5000/api/users/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await response.json();
+
+    if (!data.success) {
+      alert(data.message);
+      return;
+    }
+
+    const user = data.user;
+
+    localStorage.setItem("user", JSON.stringify(user));
+
+    const role = user.state;
+
+    if (role === "Clerk") {
+      navigate("/clerk");
+    } else if (role === "Manager") {
+      navigate("/manager");
+    } else if (role === "Contractor") {
+      navigate("/contractor");
+    }
+  };
+
   return (
-    <>
-      <div className="container-fluid login-page">
-        <div className="row justify-content-center align-items-center min-vh-100">
-          <div className="col-lg-4 col-md-6 col-sm-10">
-            <div className="card login-card shadow">
-              <div className="card-body p-4">
-                <h2 className="text-center mb-4">Login Form</h2>
+    <div className={style.loginContainer}>
+      <div className={style.overlay}>
+        <h1 className={style.title}>Coal Management System</h1>
 
-                <form>
-                  <div className="mb-3">
-                    <label className="form-label">userName</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Enter userName"
-                    />
-                  </div>
+        <div className={style.loginBox}>
+          <h2>Login</h2>
 
-                  <div className="mb-3">
-                    <label className="form-label">Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      placeholder="Enter Password"
-                    />
-                  </div>
+          <form onSubmit={handleLogin}>
+            <label>ID</label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
 
-                  <button
-                    className="btn btn-primary w-100"
-                    onClick={() => navigate("/Home")}
-                  >
-                    Login
-                  </button>
+            <label>Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
 
-                  <p className="text-center mt-3">
-                    Don't have an account? <a href="/Rigister">Signup</a>
-                  </p>
-                </form>
-              </div>
-            </div>
-          </div>
+            <button type="submit">Login</button>
+          </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
+
 export default LoginPage;
